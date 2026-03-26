@@ -57,7 +57,7 @@ taskmanager/
 ## ⚙️ Setup Instructions
 
 ### 1️⃣ Clone the Repository
-git clone https://github.com/your-username/taskmanager.git
+git clone https://github.com/rishi02soni/taskmanager.git
 
 cd taskmanager
 

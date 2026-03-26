@@ -1,0 +1,36 @@
+package com.taskmanager.service;
+
+import org.springframework.stereotype.Service;
+import com.taskmanager.repository.*;
+import com.taskmanager.entity.*;
+import java.util.*;
+
+@Service
+public class TaskService {
+
+    private final TaskRepository taskRepo;
+
+    public TaskService(TaskRepository taskRepo) {
+        this.taskRepo = taskRepo;
+    }
+
+    public Task create(Task task) {
+        return taskRepo.save(task);
+    }
+
+    public List<Task> getAll() {
+        return taskRepo.findAll();
+    }
+
+    public Task update(Long id, Task updated) {
+        Task task = taskRepo.findById(id).orElseThrow();
+        task.setTitle(updated.getTitle());
+        task.setDescription(updated.getDescription());
+        task.setCompleted(updated.isCompleted());
+        return taskRepo.save(task);
+    }
+
+    public void delete(Long id) {
+        taskRepo.deleteById(id);
+    }
+}

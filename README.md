@@ -2,6 +2,7 @@
 
 A production-ready backend application built using **Spring Boot** that allows users to securely manage tasks with **JWT Authentication**. This project follows **industry-level architecture** and best practices.
 
+
 ---
 
 ## 📌 Project Overview
